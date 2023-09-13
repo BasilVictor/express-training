@@ -17,9 +17,8 @@ app.use(express.json());
 // Parse application/x-www-form-urlencoded, basically parse incoming Request Object if strings or arrays
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/", (req, res, next) => {
-  res.send({ message: "hello world" });
-});
+// Adding our routes to Express App
+require("./routes")(app);
 
 app.listen(PORT, (err) => {
   if (err) {
