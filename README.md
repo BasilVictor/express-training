@@ -1,22 +1,21 @@
-# 1 - Getting Started
+# 2 - Routes
 
-## Setting up Node Project
-
-1. Create a directory for your project.
-2. Open Command Prompt inside the directory, and run `npm init -y`. This creates a package.json file.
-3. Add `"start": "node app.js"` to `scripts`, this helps to easily deploy your server.
+In here we will start creating some APIs according to our use case.
 
 ## Installing Dependencies
 
 We will use npm to install packages.
 
 ```
-npm install express
-npm install cors
+npm install mysql2
 ```
 
-## Creating a simple REST API server
+## Creating routes
 
-1. Create a file named `app.js`. It should contain the code as in the file in this repository.
-2. Whenever ready, run the following command in the terminal: `npm start`.
-3. Your server is now deployed on https://localhost:3000, or depending on where you are deploying the server, host and port would change.
+First we create a routes directory, and inside that an `index.js` file. The file contents must be like the one in this repository. We also modify `app.js` file. Also create the other files as per the repository.
+
+## Understanding the Project Structure
+
+- `routes` directory, contains all the routes
+- `routes/home.js` handles the home page
+- `routes/api` handles all the apis, for now we only have `/api/posts`, as apis increases files increase in this directory.
