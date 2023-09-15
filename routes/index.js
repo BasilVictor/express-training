@@ -1,4 +1,6 @@
+const path = require("path");
+const express = require("express");
 module.exports = (app) => {
-  app.use("/", require("./home"));
+  app.use("/", express.static(path.join(__dirname, "../public")));
   app.use("/api", require("./api"));
 };
